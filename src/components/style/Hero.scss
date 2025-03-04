@@ -1,0 +1,51 @@
+@import '../../assets/variables.scss';
+
+.hero-bg {
+    width: 1260px;
+    position: absolute;
+    z-index: -1;
+    top: 84px;
+    left: 0;
+    overflow-y: hidden;
+    // max-height: 100vh;
+}
+
+.hero-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    // background-color: rgba(0, 0, 0, 0.249);
+
+
+
+    .left {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-size: 80px;
+        }
+    }
+
+    .right {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+
+        .hero-portrait {
+            height: 100%;
+            // position: absolute;
+            // z-index: 2;
+            // right: 0;
+            // top: 0;
+        }
+    }
+
+}
