@@ -29,8 +29,9 @@ a {
   text-decoration: inherit;
   transition: all 0.3s;
 }
-img{
-   transition: all 0.3s;
+
+img {
+  transition: all 0.3s;
 }
 
 a:hover {
@@ -46,21 +47,25 @@ h1 {
   font-size: 50px;
   line-height: 1.1;
 }
-h2{
+
+h2 {
   text-transform: uppercase;
   font-size: 30px;
 }
-h2:before{
+
+h2:before {
   content: "<";
   left: 0;
   color: $accent-color;
 }
-h2:after{
+
+h2:after {
   content: ">";
   left: 0;
   color: $accent-color;
 }
-h3{
+
+h3 {
   text-transform: uppercase;
   font-size: 24px;
 }
@@ -100,8 +105,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-.separator{
+
+.separator {
   height: 7px;
-  background-color: $accent-color;
-  width:100%;
+  background: linear-gradient(90deg,rgba(252, 252, 252, 1) 0%, rgba(250, 128, 114, 1) 51%, rgba(210, 78, 63, 1) 100%);
+  width: 100%;
 }

@@ -1,0 +1,35 @@
+@import '../../variables.scss';
+
+.about{
+            margin-top: 70px;
+            margin-bottom: 70px;
+    &-content{
+        width: 100%;;
+        display: flex;
+                margin-top: 30px;
+
+        &-description{
+            width: 50%;
+            text-align: start;
+            p{
+                margin-top: 10px;
+                span{
+                    color: $accent-color;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &-image{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 300px;
+            
+            }
+
+        }
+    }
+}

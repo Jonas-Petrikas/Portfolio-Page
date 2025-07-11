@@ -22,7 +22,7 @@ export default function Header() {
           <a href="#" className="menu-item">
             About
           </a>
-          <a href="#" className="menu-item">
+          <a href="#portfolio" className="menu-item">
             Portfolio
           </a>
                     <a href="#" className="menu-item">

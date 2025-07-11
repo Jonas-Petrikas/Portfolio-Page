@@ -2,6 +2,8 @@ import "./style/Footer.scss";
 
 export default function Footer() {
   return (
+    <>
+          <div className="separator"></div>
     <footer className="footer">
         <div className="footer-content">
             <div className="footer-grid wrapper">
@@ -71,5 +73,6 @@ export default function Footer() {
             </div>
         </div>
     </footer>
+    </>
   );
 }

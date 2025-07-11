@@ -7,36 +7,46 @@
   flex-direction: column;
   align-items: center;
   padding-top: 70px;
-
+  padding-bottom: 70px;
 
   .portfolio-items {
     padding-top: 50px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
-    
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    max-width: calc(100vw - 20px);
+    padding: 20px 0;
+
     .portfolio-item {
       background-color: black;
       border-radius: 15px;
-      max-width: 350px;
+      min-width: 350px;
       display: flex;
       flex-direction: column;
       transition: all 0.3s;
+
       &-image {
         img {
           width: 100%;
           filter: grayscale(75%);
+
           &:hover {
             filter: grayscale(0%);
           }
+
           border-radius: 15px 0 0 0px;
         }
       }
+
       &-name {
         margin-top: 20px;
       }
+
       &-tech-stack {
+        padding: 0 10px 0 10px;
+
         span {
           background-color: $accent2;
           border-radius: 7px;
@@ -45,18 +55,24 @@
           text-transform: lowercase;
         }
       }
+
       &-description {
         margin-top: 20px;
+        padding: 0 10px 0 10px;
       }
+
       &-btns {
         margin: 20px 0;
+
         button {
           padding: 7px 20px;
           margin: 0 5px;
         }
       }
+
       &:hover {
         scale: 1.05;
+
         .portfolio-item-image {
           img {
             filter: grayscale(0%);
@@ -64,5 +80,8 @@
         }
       }
     }
+  }
+  .portfolio-cta{
+    margin-top: 30px;
   }
 }
