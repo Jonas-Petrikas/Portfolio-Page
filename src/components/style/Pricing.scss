@@ -1,0 +1,79 @@
+@import "../../variables.scss";
+
+.pricing {
+    margin-top: 100px;
+
+    &-cards {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+        margin-bottom: 50px;
+
+        .pricing-card-1,
+        .pricing-card-2,
+        .pricing-card-3 {
+            background-color: #ffffff20;
+            width: 350px;
+            padding: 30px;
+            border-radius: 7px;
+            transition: all 0.3s ease;
+
+            ul {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left: 30px;
+
+                li {
+                    text-align: start;
+
+                }
+            }
+
+            p {
+                text-align: start;
+            }
+
+            h3 {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            &:hover {
+                scale: 1.05;
+            }
+        }
+
+        .pricing-card-1,
+        .pricing-card-3 {
+            border: 1px solid #ffffff60;
+            box-shadow: #ffffff20 0px 5px 15px 0px;
+        }
+
+        .pricing-card-2 {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border: 2px solid $accent-color;
+            box-shadow: #d24e3f20 0px 6px 24px 0px;
+            padding: 30px;
+
+            h3 {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &-addons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        p {
+            color: $accent-color;
+            font-weight: 500;
+        }
+    }
+}

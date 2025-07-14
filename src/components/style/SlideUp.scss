@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+.slide-up{
+    position:fixed;
+    bottom: 15px;
+    right: 15px;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent2;
+    border-radius: 50%;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    img{
+        width: 70px;
+        
+    }
+}

@@ -19,16 +19,16 @@ export default function Header() {
           </a>
         </div>
         <div className="nav-menu">
-          <a href="#" className="menu-item">
+          <a href="#about" className="menu-item">
             About
           </a>
           <a href="#portfolio" className="menu-item">
             Portfolio
           </a>
-                    <a href="#" className="menu-item">
+                    <a href="#pricing" className="menu-item">
             Pricing
           </a>
-                    <a href="#" className="menu-item">
+                    <a href="#contacts" className="menu-item">
             Contact
           </a>
         </div>
@@ -44,7 +44,7 @@ export default function Header() {
 
             </div>
           
-          <a href="#">
+          <a href="#contacts">
             <button>Lets talk!</button>
           </a>
         </div>
