@@ -15,7 +15,7 @@ export default function PortfolioScrollBtns() {
     if (!el) return;
 
         if (scrollX > 0) {
-            el.scrollLeft = el.scrollLeft - 250;
+            el.scrollLeft = el.scrollLeft - 370;
             setScrollX(scrollX - 250);
         }
 
@@ -28,7 +28,7 @@ export default function PortfolioScrollBtns() {
     if (!el) return;
 
         if (scrollX < 350) {
-            el.scrollLeft = el.scrollLeft + 250;
+            el.scrollLeft = el.scrollLeft + 370;
             setScrollX(scrollX + 250);
         }
 
