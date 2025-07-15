@@ -2,11 +2,13 @@
 
 .portfolio {
   width: 100%;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
+  position: relative;
 
   .portfolio-items {
 
@@ -15,9 +17,14 @@
     gap: 20px;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
     max-width: calc(100vw - 20px);
     padding-top: 50px;
     padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
 
     .portfolio-item {
       background-color: black;

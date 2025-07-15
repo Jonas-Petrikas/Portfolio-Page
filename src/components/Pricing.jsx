@@ -2,7 +2,7 @@ import './style/Pricing.scss';
 
 export default function Pricing() {
     return (
-        <section className='pricing' id='pricing'>
+        <section className='pricing wrapper' id='pricing'>
             <h2>Pricing</h2>
             <div className="pricing-cards">
                 <div className="pricing-card-1">

@@ -2,20 +2,22 @@
 
 .pricing {
     margin-top: 100px;
+    width: 100%;
 
     &-cards {
         margin-top: 50px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 35px;
+        justify-content: space-between;
         margin-bottom: 50px;
+        flex-wrap: wrap;
+        width: 100%;
 
         .pricing-card-1,
         .pricing-card-2,
         .pricing-card-3 {
             background-color: #ffffff20;
-            width: 350px;
+            width: 375px;
             padding: 30px;
             border-radius: 7px;
             transition: all 0.3s ease;

@@ -5,6 +5,9 @@ import subkinas from "../assets/images/portfolio/subkinas.png";
 import sveskim from "../assets/images/portfolio/sveskim.png";
 import trafalgar from "../assets/images/portfolio/trafalgar2.png";
 import PortfolioItem from "./PorfolioItem";
+import { useEffect, useState } from "react";
+import PortfolioScrollBtns from "./PortfolioScrollBtns";
+
 
 const portfolioItems = [
   {
@@ -13,8 +16,8 @@ const portfolioItems = [
     image: subkinas,
     techStack: ["Wordpress", "Elementor"],
     description:
-    "Video production business website built on Wordpress with Elementor."
-      ,
+      "Video production business website built on Wordpress with Elementor."
+    ,
     livePreview: "#",
   },
   {
@@ -37,7 +40,7 @@ const portfolioItems = [
     livePreview: "#",
     github: "#",
   },
-    {
+  {
     id: 4,
     name: "Trafalgal",
     image: trafalgar,
@@ -62,7 +65,25 @@ const portfolioItems = [
 
 
 
+
 export default function Portfolio() {
+const [active, setActive] = useState(0);
+
+useEffect(() => {
+    const el = document.getElementById("portfolio-items");
+    if (!el) return;
+
+    const handleScroll = _ => console.log(el.scrollLeft);
+    el.addEventListener('scroll', handleScroll);
+
+    return () => {
+      el.removeEventListener('scroll', handleScroll); // clean up
+    };
+  }, []);
+
+  const scrollLeft = _ =>{
+
+  }
   return (
     <>
       <div className="separator"></div>
@@ -70,12 +91,12 @@ export default function Portfolio() {
 
         <div className="portfolio-container">
           <h2>Portfolio projects</h2>
-          <div className="portfolio-items">
+          <div className="portfolio-items" id="portfolio-items">
             {/* Map through portfolio items to render them */}
             {
               portfolioItems.map((item) =>
                 <PortfolioItem
-                key={item.id}
+                  key={item.id}
                   id={item.id}
                   name={item.name}
                   image={item.image}
@@ -90,7 +111,10 @@ export default function Portfolio() {
         <div className="portfolio-cta">
           Check other projects on <a href="https://github.com/Jonas-Petrikas">Github</a>
         </div>
+        <PortfolioScrollBtns/>
       </section>
+      
+
     </>
   );
 }

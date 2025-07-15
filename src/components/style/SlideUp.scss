@@ -13,8 +13,12 @@
     z-index: 5;
     cursor: pointer;
     transition: all 0.3s ease;
+            &:hover{
+            scale: 1.1;
+        }
     img{
         width: 70px;
+
         
     }
 }

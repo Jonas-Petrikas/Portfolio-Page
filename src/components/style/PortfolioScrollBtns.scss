@@ -1,0 +1,34 @@
+@import '../../variables.scss';
+
+.portfolio-btns-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+   margin-left: -20px;
+   margin-right: -20px;
+   top: 50%;
+           padding: 5px;
+    .portfolio-btn-left, .portfolio-btn-right{
+        width: 65px;
+        height: 65px;
+        background-color: #00000090;
+        opacity: 70%;;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        user-select: none;
+        img{
+            height:50px;
+        }
+
+        &:hover{
+            opacity: 100%;
+            scale: 1.1;
+        }
+    }
+}

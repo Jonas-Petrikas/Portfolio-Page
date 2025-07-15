@@ -2,9 +2,7 @@ import './style/SlideUp.scss';
 import slideUpIcon from '../assets/images/icons/slide-up.svg';
 import { useState, useEffect } from 'react';
 
-let scrollY;
 export default function SlideUp() {
-
     const [visible, setVisible] = useState(0);
     const [opacity, setOpacity] = useState(100);
     useEffect(() => {
