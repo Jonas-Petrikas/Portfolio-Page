@@ -7,19 +7,21 @@ import About from './components/About';
 import Pricing from './components/Pricing';
 import Contacts from './components/Contacts';
 import SlideUp from './components/SlideUp';
+import MobileNav from './components/MobileNav';
 
 function App() {
 
   return (
     <>
+
       <Header />
-      <SlideUp/>
+      <SlideUp />
       <Hero />
-      <Portfolio/>
-      <About/>
-      <Pricing/>
-      <Contacts/>
-      <Footer/>
+      <Portfolio />
+      <About />
+      <Pricing />
+      <Contacts />
+      <Footer />
     </>
   )
 }

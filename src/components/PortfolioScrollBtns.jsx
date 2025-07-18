@@ -3,7 +3,8 @@ import leftArrow from '../assets/images/icons/left-arrow.svg'
 import rightArrow from '../assets/images/icons/right-arrow.svg'
 import { useEffect, useState } from 'react';
 
-export default function PortfolioScrollBtns() {
+export default function PortfolioScrollBtns({qty}) {
+
     const [scrollX, setScrollX] = useState(0);
     useEffect(() => {
         const el = document.getElementById("portfolio-items");
@@ -19,7 +20,6 @@ export default function PortfolioScrollBtns() {
             setScrollX(scrollX - 250);
         }
 
-        console.log('scroll left from', scrollX)
 
     }
     const scrollRight = _ => {
@@ -31,8 +31,6 @@ export default function PortfolioScrollBtns() {
             el.scrollLeft = el.scrollLeft + 370;
             setScrollX(scrollX + 250);
         }
-
-        console.log('scroll right from', scrollX)
 
     }
     return (

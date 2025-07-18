@@ -5,18 +5,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-     margin-top: 100px;
-     margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 
     h2 {
-       
+
         margin-bottom: 30px;
     }
 
     p {
         padding: 0 30px;
         width: 100%;
-        
+
     }
 
     form {
@@ -46,8 +46,34 @@
             width: 30%;
             min-height: 70px;
         }
-        button{
+
+        button {
             width: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .contacts {
+        p {
+            padding: 0;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        form {
+            input {
+                width: 100%;
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
         }
     }
 }

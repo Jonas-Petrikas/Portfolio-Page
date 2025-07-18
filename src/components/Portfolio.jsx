@@ -111,8 +111,9 @@ useEffect(() => {
         <div className="portfolio-cta">
           Check other projects on <a href="https://github.com/Jonas-Petrikas">Github</a>
         </div>
-        <PortfolioScrollBtns/>
+       
       </section>
+       <PortfolioScrollBtns qty={portfolioItems.length}/>
       
 
     </>

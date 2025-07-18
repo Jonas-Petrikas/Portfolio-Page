@@ -1,0 +1,83 @@
+@import '../../variables.scss';
+
+.mobilenav-modal {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    background-color: #000000bb;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &-logo {
+        margin-bottom: 30px;
+        a {
+            span {
+                color: $white;
+                font-size: 24px;
+            }
+            .logo-decor{
+                color: $accent-color;
+                font-weight: 700;
+            }
+
+        }
+
+    }
+
+    &-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 50px;
+        width: 50px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        a {
+            color: $white;
+
+            &:hover {
+                color: $accent2;
+
+            }
+        }
+    }
+
+
+    &-soc-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        img {
+            width: 40px;
+            opacity: 60%;
+
+            &:hover {
+                opacity: 100%;
+            }
+        }
+
+    }
+
+
+
+}

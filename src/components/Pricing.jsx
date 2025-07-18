@@ -48,12 +48,15 @@ export default function Pricing() {
             </div>
 
             <div className="pricing-addons">
-               <p>Optional add-ons: </p> 
-                
-                    <li>SEO optimization - €80</li>
-                    <li>Multi-language support  - €150</li>
-                    <li>Maintenance & suppprt - from €50 / month</li>
-            
+                <p>Optional add-ons: </p>
+                <hr />
+                <div>
+                <li>SEO optimization - €80</li>
+                <li>Multi-language support  - €150</li>
+                <li>Maintenance & suppprt - from €50 / month</li>
+                </div>
+
+
             </div>
 
         </section>
