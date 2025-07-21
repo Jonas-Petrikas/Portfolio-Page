@@ -29,28 +29,28 @@ export default function MobileNav({mobileNavVisable, setMobileNavVisible}) {
                     <img src={closeIcon} alt="close icon" />
                 </div>
                 <div className="mobilenav-modal-menu">
-                    <a href="#about" className="menu-item">
+                    <a href="#about" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
                         About
                     </a>
-                    <a href="#portfolio" className="menu-item">
+                    <a href="#portfolio" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
                         Portfolio
                     </a>
-                    <a href="#pricing" className="menu-item">
+                    <a href="#pricing" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
                         Pricing
                     </a>
-                    <a href="#contacts" className="menu-item">
+                    <a href="#contacts" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
                         Contact
                     </a>
-                    <a href="#contacts">
-                        <button>Lets talk!</button>
+                    <a href="#contacts" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
+                        <button >Lets talk!</button>
                     </a>
 
                 </div>
                 <div className="mobilenav-modal-soc-icons">
-                    <a href="https://github.com/Jonas-Petrikas">
+                    <a href="https://github.com/Jonas-Petrikas" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
                         <img src={githubLogo} alt="Github logo" />
                     </a>
-                    <a href="https://www.linkedin.com/in/jonaspetrikas/">
+                    <a href="https://www.linkedin.com/in/jonaspetrikas/" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
                         <img src={LinkedInLogo} alt="LinkedIn logo" />
                     </a>
                 </div>

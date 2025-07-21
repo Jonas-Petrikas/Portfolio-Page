@@ -1,116 +1,127 @@
 @import './variables.scss';
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  background-color: $bg-color;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// @media (prefers-color-scheme: light) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 
-
-a {
-  font-weight: 500;
-  color: $accent-color;
-  text-decoration: inherit;
-  transition: all 0.3s;
-}
-
-img {
-  transition: all 0.3s;
-}
-
-a:hover {
-  color: $accent2;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  position: relative;
-  height: 100%;
-}
-
-h1 {
-  font-size: 50px;
-  line-height: 1.1;
-}
-
-h2 {
-  text-transform: uppercase;
-  font-size: 30px;
-}
-
-h2:before {
-  content: "<";
-  left: 0;
-  color: $accent-color;
-}
-
-h2:after {
-  content: ">";
-  left: 0;
-  color: $accent-color;
-}
-
-h3 {
-  text-transform: uppercase;
-  font-size: 24px;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-button:hover {
-  border-color: $accent-color;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    background-color: $bg-color;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+  a {
+    font-weight: 500;
+    color: $accent-color;
+    text-decoration: inherit;
+    transition: all 0.3s;
+  }
+
+  img {
+    transition: all 0.3s;
   }
 
   a:hover {
-    color: #747bff;
+    color: $accent2;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    position: relative;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 1.1;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+
+  h2:before {
+    content: "<";
+    left: 0;
+    color: $accent-color;
+  }
+
+  h2:after {
+    content: ">";
+    left: 0;
+    color: $accent-color;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 24px;
   }
 
   button {
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.3s;
   }
-}
 
-.separator {
-  height: 7px;
-  background: linear-gradient(90deg,rgba(252, 252, 252, 1) 0%, rgba(250, 128, 114, 1) 51%, rgba(210, 78, 63, 1) 100%);
-  width: 100%;
-}
+  button:hover {
+    border-color: $accent-color;
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  // @media (prefers-color-scheme: light) {
+    :root {
+      color: $white;
+      background-color: $bg-color;
+    }
+
+    a:hover {
+      color: $accent-color;
+    }
+
+    button {
+      background-color: #1a1a1a;
+      color: $white;
+    }
+
+    form {
+      input {
+        color: $white;
+      }
+
+      textarea {
+        color: $white;
+      }
+    }
+  // }
+
+  .separator {
+    height: 7px;
+    background: linear-gradient(90deg, rgba(252, 252, 252, 1) 0%, rgba(250, 128, 114, 1) 51%, rgba(210, 78, 63, 1) 100%);
+    width: 100%;
+  }
+// }

@@ -9,7 +9,7 @@ const code = "<";
 const code2 = "/>";
 
 export default function Header() {
-  const [mobileNavVisable, setMobileNavVisible] = useState(true);
+  const [mobileNavVisable, setMobileNavVisible] = useState(false);
   return (
     <>
 
