@@ -1,12 +1,12 @@
 import './App.scss';
 import Header from './components/Header';
-import Hero from './components/Hero';
 import Footer from './components/Footer';
-import Portfolio from './components/Portfolio';
-import About from './components/About';
-import Pricing from './components/Pricing';
-import Contacts from './components/Contacts';
+import { Route, Routes } from 'react-router';
+import Home from './pages/Home';
+import ToS from './pages/ToS';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import SlideUp from './components/SlideUp';
+import CookieConsent from './components/CookieConsent';
 
 function App() {
 
@@ -14,11 +14,12 @@ function App() {
     <>
       <Header />
       <SlideUp />
-      <Hero />
-      <Portfolio />
-      <About />
-      <Pricing />
-      <Contacts />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/terms-of-service" element={<ToS />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
+      <CookieConsent />
       <Footer />
     </>
   )

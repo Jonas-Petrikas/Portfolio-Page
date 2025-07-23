@@ -18,7 +18,7 @@ const portfolioItems = [
     description:
       "Video production business website built on Wordpress with Elementor."
     ,
-    livePreview: "#",
+    livePreview: "https://subkinas.com/",
   },
   {
     id: 2,
@@ -27,8 +27,8 @@ const portfolioItems = [
     techStack: ["JS", "react", "HTML", "CSS"],
     description:
       "Flower-Shop website built following ui/ux figma design for a plant shop.",
-    livePreview: "#",
-    github: "#",
+    livePreview: "https://jonas-petrikas.github.io/Flower-shop-REACT/",
+    github: "https://github.com/Jonas-Petrikas/Flower-shop-REACT",
   },
   {
     id: 3,
@@ -37,8 +37,8 @@ const portfolioItems = [
     techStack: ["ux/ui", "HTML", "CSS"],
     description:
       "Custom built responsive landing page for film festival. Including ux/ui and analytics.",
-    livePreview: "#",
-    github: "#",
+    livePreview: "https://skrynai.subkinas.com/",
+    github: "https://github.com/Jonas-Petrikas/Skrynai",
   },
   {
     id: 4,
@@ -47,8 +47,8 @@ const portfolioItems = [
     techStack: ["HTML", "CSS"],
     description:
       "Functional landing page built following a Figma design and requirements.",
-    livePreview: "#",
-    github: "#",
+    livePreview: "https://jonas-petrikas.github.io/Trafalgar-HTML/",
+    github: "https://github.com/Jonas-Petrikas/Trafalgar-HTML",
   },
   {
     id: 5,
@@ -57,8 +57,7 @@ const portfolioItems = [
     techStack: ["Twig", "HTML", "CSS"],
     description:
       "Business website for a local business. Built following prepared design and requirements.",
-    livePreview: "#",
-    github: "#",
+    livePreview: "https://sveskim.lt/",
   },
 
 ];
@@ -109,7 +108,7 @@ useEffect(() => {
           </div>
         </div>
         <div className="portfolio-cta">
-          Check other projects on <a href="https://github.com/Jonas-Petrikas">Github</a>
+          Check other projects on <a href="https://github.com/Jonas-Petrikas" target="_blank">Github</a>
         </div>
        <PortfolioScrollBtns qty={portfolioItems.length}/>
       </section>

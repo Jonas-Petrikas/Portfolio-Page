@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+.cookie-consent{
+    position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: $accent2;
+      color: $white;
+      padding: 1rem;
+      text-align: center;
+      z-index: 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      p{
+        font-size: 16px;
+        font-weight: 500;
+      }
+      a{
+        color: $white;
+        text-decoration: underline;
+      }
+}

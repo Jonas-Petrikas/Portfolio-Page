@@ -9,8 +9,8 @@ export default function Hero() {
           <h1>Custom Web Solutions</h1>
           <p>Helping you realize digital opportunities to grow your business</p>
           <div className="hero-btns">
-            <button>View My Work</button>
-            <button className="highlighted">Get in touch!</button>
+            <a href="#portfolio"><button>View My Work</button></a>
+            <a href="#contacts"><button className="highlighted">Get in touch!</button></a>
           </div>
         </div>
         <div className="right">

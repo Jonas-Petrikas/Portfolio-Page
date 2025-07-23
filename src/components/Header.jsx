@@ -4,6 +4,7 @@ import LinkedInLogo from "../assets/images/logos/linkedin.svg";
 import menuIcon from "../assets/images/icons/menu.svg";
 import MobileNav from "./MobileNav";
 import { useState } from 'react';
+import { NavLink } from "react-router";
 
 const code = "<";
 const code2 = "/>";
@@ -16,13 +17,13 @@ export default function Header() {
       <header className="desktop-header">
         <div className="top-navbar wrapper">
           <div className="header-logo">
-            <a href="https://jonaspetrikas.com/">
+            <NavLink to='/' end>
               <span className="logo-decor"> {code} </span>
               <span>
                 Jonas<b>Petrikas</b>
               </span>
               <span className="logo-decor"> {code2} </span>
-            </a>
+              </NavLink> 
           </div>
           <div className="nav-menu">
             <a href="#about" className="menu-item">
@@ -40,10 +41,10 @@ export default function Header() {
           </div>
           <div className="cta">
             <div className="soc-icons">
-              <a href="https://github.com/Jonas-Petrikas">
+              <a href="https://github.com/Jonas-Petrikas" target="_blank">
                 <img src={githubLogo} alt="Github logo" />
               </a>
-              <a href="https://www.linkedin.com/in/jonaspetrikas/">
+              <a href="https://www.linkedin.com/in/jonaspetrikas/" target="_blank">
                 <img src={LinkedInLogo} alt="LinkedIn logo" />
               </a>
 
