@@ -1,23 +1,53 @@
 @import '../../variables.scss';
-.cookie-consent{
-    position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: $accent2;
-      color: $white;
-      padding: 1rem;
-      text-align: center;
-      z-index: 4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      p{
-        font-size: 16px;
-        font-weight: 500;
-      }
-      a{
-        color: $white;
-        text-decoration: underline;
-      }
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+   width: 100%;
+     background: $accent2;
+  color: $white;
+ 
+  text-align: center;
+  z-index: 999;
+
+  &-content{
+  width: 100%;
+ padding: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+    .cookie-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    button{
+      background-color: $bg-color;
+      padding: 5px 15px;
+      font-weight: 400;
+    }
+  }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+
+}
+
+@media screen and (max-width: 750px) {
+  .cookie-consent-content {
+      // padding: 1.5rem;
+    flex-direction: column;
+  }
+
+
 }

@@ -7,68 +7,74 @@ import trafalgar from "../assets/images/portfolio/trafalgar2.png";
 import PortfolioItem from "./PorfolioItem";
 import { useEffect, useState } from "react";
 import PortfolioScrollBtns from "./PortfolioScrollBtns";
+import { useTranslation } from 'react-i18next';
 
 
-const portfolioItems = [
-  {
-    id: 1,
-    name: "Subkinas",
-    image: subkinas,
-    techStack: ["Wordpress", "Elementor"],
-    description:
-      "Video production business website built on Wordpress with Elementor."
-    ,
-    livePreview: "https://subkinas.com/",
-  },
-  {
-    id: 2,
-    name: "Green-Thumb",
-    image: flowerShop,
-    techStack: ["JS", "react", "HTML", "CSS"],
-    description:
-      "Flower-Shop website built following ui/ux figma design for a plant shop.",
-    livePreview: "https://jonas-petrikas.github.io/Flower-shop-REACT/",
-    github: "https://github.com/Jonas-Petrikas/Flower-shop-REACT",
-  },
-  {
-    id: 3,
-    name: "Klaipėdos skrynai",
-    image: skrynai,
-    techStack: ["ux/ui", "HTML", "CSS"],
-    description:
-      "Custom built responsive landing page for film festival. Including ux/ui and analytics.",
-    livePreview: "https://skrynai.subkinas.com/",
-    github: "https://github.com/Jonas-Petrikas/Skrynai",
-  },
-  {
-    id: 4,
-    name: "Trafalgal",
-    image: trafalgar,
-    techStack: ["HTML", "CSS"],
-    description:
-      "Functional landing page built following a Figma design and requirements.",
-    livePreview: "https://jonas-petrikas.github.io/Trafalgar-HTML/",
-    github: "https://github.com/Jonas-Petrikas/Trafalgar-HTML",
-  },
-  {
-    id: 5,
-    name: "Švęskim",
-    image: sveskim,
-    techStack: ["Twig", "HTML", "CSS"],
-    description:
-      "Business website for a local business. Built following prepared design and requirements.",
-    livePreview: "https://sveskim.lt/",
-  },
 
-];
+
 
 
 
 
 export default function Portfolio() {
-const [active, setActive] = useState(0);
+  const { t, i18n } = useTranslation('portfolio');
+  const portfolioItems = [
+    {
+      id: 1,
+      name: "Subkinas",
+      image: subkinas,
+      techStack: ["Wordpress", "Elementor"],
+      description:
+        // "Video production business website built on Wordpress with Elementor."
+        t("description1")
+      ,
+      livePreview: "https://subkinas.com/",
+    },
+    {
+      id: 2,
+      name: "Green-Thumb",
+      image: flowerShop,
+      techStack: ["JS", "react", "HTML", "CSS"],
+      description:
+        t("description2"),
+      livePreview: "https://jonas-petrikas.github.io/Flower-shop-REACT/",
+      github: "https://github.com/Jonas-Petrikas/Flower-shop-REACT",
+    },
+    {
+      id: 3,
+      name: "Klaipėdos skrynai",
+      image: skrynai,
+      techStack: ["ux/ui", "HTML", "CSS"],
+      description:
+        t("description3"),
+      livePreview: "https://skrynai.subkinas.com/",
+      github: "https://github.com/Jonas-Petrikas/Skrynai",
+    },
+    {
+      id: 4,
+      name: "Trafalgal",
+      image: trafalgar,
+      techStack: ["HTML", "CSS"],
+      description:
+        t("description4"),
+      livePreview: "https://jonas-petrikas.github.io/Trafalgar-HTML/",
+      github: "https://github.com/Jonas-Petrikas/Trafalgar-HTML",
+    },
+    {
+      id: 5,
+      name: "Švęskim",
+      image: sveskim,
+      techStack: ["Twig", "HTML", "CSS"],
+      description:
+        t("description5"),
+      livePreview: "https://sveskim.lt/",
+    },
 
-useEffect(() => {
+  ];
+  const [active, setActive] = useState(0);
+
+
+  useEffect(() => {
     const el = document.getElementById("portfolio-items");
     if (!el) return;
 
@@ -80,7 +86,7 @@ useEffect(() => {
     };
   }, []);
 
-  const scrollLeft = _ =>{
+  const scrollLeft = _ => {
 
   }
   return (
@@ -89,7 +95,7 @@ useEffect(() => {
       <section className="portfolio" id="portfolio">
 
         <div className="portfolio-container">
-          <h2>Portfolio projects</h2>
+          <h2>{t("title")}</h2>
           <div className="portfolio-items" id="portfolio-items">
             {/* Map through portfolio items to render them */}
             {
@@ -108,12 +114,12 @@ useEffect(() => {
           </div>
         </div>
         <div className="portfolio-cta">
-          Check other projects on <a href="https://github.com/Jonas-Petrikas" target="_blank">Github</a>
+          {t("Check more")} <a href="https://github.com/Jonas-Petrikas" target="_blank">Github</a>
         </div>
-       <PortfolioScrollBtns qty={portfolioItems.length}/>
+        <PortfolioScrollBtns qty={portfolioItems.length} />
       </section>
-       
-      
+
+
 
     </>
   );

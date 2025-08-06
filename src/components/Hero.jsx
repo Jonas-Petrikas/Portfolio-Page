@@ -1,16 +1,19 @@
 import "./style/Hero.scss";
 import heroPortrait from "../assets/images/Jonas.webp";
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
+  // const { t, i18n } = useTranslation('translation', {lng: 'lt'});
+   const { t, i18n } = useTranslation('hero');
   return (
     <>
       <div className="hero-container wrapper">
         <div className="left">
-          <h1>Custom Web Solutions</h1>
-          <p>Helping you realize digital opportunities to grow your business</p>
+          <h1>{t('title')}</h1>
+          <p>{t('text')}</p>
           <div className="hero-btns">
-            <a href="#portfolio"><button>View My Work</button></a>
-            <a href="#contacts"><button className="highlighted">Get in touch!</button></a>
+            <a href="#portfolio"><button>{t('View My Work')}</button></a>
+            <a href="#contacts"><button className="highlighted">{t('Get in Touch')}</button></a>
           </div>
         </div>
         <div className="right">

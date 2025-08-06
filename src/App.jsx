@@ -9,7 +9,6 @@ import SlideUp from './components/SlideUp';
 import CookieConsent from './components/CookieConsent';
 
 function App() {
-
   return (
     <>
       <Header />

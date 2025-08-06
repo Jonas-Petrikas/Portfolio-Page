@@ -5,12 +5,16 @@ import menuIcon from "../assets/images/icons/menu.svg";
 import MobileNav from "./MobileNav";
 import { useState } from 'react';
 import { NavLink } from "react-router";
+import { useTranslation } from 'react-i18next';
 
 const code = "<";
 const code2 = "/>";
 
 export default function Header() {
+  
   const [mobileNavVisable, setMobileNavVisible] = useState(false);
+  const { t, i18n } = useTranslation('header');
+  console.log(i18n);
   return (
     <>
 
@@ -27,16 +31,16 @@ export default function Header() {
           </div>
           <div className="nav-menu">
             <a href="#about" className="menu-item">
-              About
+              {t('About')}
             </a>
             <a href="#portfolio" className="menu-item">
-              Portfolio
+              {t('Portfolio')}
             </a>
             <a href="#pricing" className="menu-item">
-              Pricing
+              {t('Pricing')}
             </a>
             <a href="#contacts" className="menu-item">
-              Contact
+              {t('Contact')}
             </a>
           </div>
           <div className="cta">
@@ -52,8 +56,11 @@ export default function Header() {
             </div>
 
             <a href="#contacts">
-              <button>Lets talk!</button>
+              <button>{t("Let's talk!")}</button>
             </a>
+                   
+              <button onClick={i18n.language==='lt'? _=>i18n.changeLanguage('en') : _=>i18n.changeLanguage('lt') }>{i18n.language==='lt' ? 'EN' : 'LT'}</button>
+      
           </div>
         </div>
       </header>

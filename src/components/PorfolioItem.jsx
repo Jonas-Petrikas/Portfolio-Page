@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 export default function PortfolioItem({id, name, image, techStack, description, livePreview, github}) {
+      const { t, i18n } = useTranslation('portfolio');
     return (
         <div className="portfolio-item" key={id}>
             <div className="portfolio-item-image">
@@ -17,12 +20,12 @@ export default function PortfolioItem({id, name, image, techStack, description, 
             {
                 livePreview && 
                 <a href={livePreview} target="_blank" rel="noopener">
-                    <button>Live preview</button></a>
+                    <button>{t("Live Preview")}</button></a>
             }
                        {
                 github && 
                 <a href={github} target="_blank" rel="noopener">
-                    <button>Check code</button></a>
+                    <button>{t("Check Code")}</button></a>
             }
               </div>
         </div>

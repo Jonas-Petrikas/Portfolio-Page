@@ -41,13 +41,23 @@ const CookieConsent = () => {
   if (!showBanner) return null;
 
   return (
+    <>
+
     <div className="cookie-consent">
+               <div className="separator"></div>
+      <div className="cookie-consent-content">
+
+      
       <p>
         This site uses cookies for analytics. See our <Link to="/privacy-policy" end>Privacy Policy</Link>.
       </p>
-      <button onClick={() => handleConsent("accepted")} >Accept all</button>
+      <div className="cookie-btns">
+ <button onClick={() => handleConsent("accepted")} >Accept all</button>
       <button onClick={() => handleConsent("rejected")} >Reject all</button>
+      </div>
+     </div>
     </div>
+    </>
   );
 };
 
