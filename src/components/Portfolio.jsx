@@ -3,6 +3,7 @@ import flowerShop from "../assets/images/portfolio/flowershop2.png";
 import skrynai from "../assets/images/portfolio/skrynai.png";
 import subkinas from "../assets/images/portfolio/subkinas.png";
 import sveskim from "../assets/images/portfolio/sveskim.png";
+import apologetika from "../assets/images/portfolio/apologetika.png";
 import trafalgar from "../assets/images/portfolio/trafalgar2.png";
 import PortfolioItem from "./PorfolioItem";
 import { useEffect, useState } from "react";
@@ -30,6 +31,7 @@ export default function Portfolio() {
       ,
       livePreview: "https://subkinas.com/",
     },
+
     {
       id: 2,
       name: "Green-Thumb",
@@ -39,6 +41,15 @@ export default function Portfolio() {
         t("description2"),
       livePreview: "https://jonas-petrikas.github.io/Flower-shop-REACT/",
       github: "https://github.com/Jonas-Petrikas/Flower-shop-REACT",
+    },
+            {
+      id: 6,
+      name: "Apologetika",
+      image: apologetika,
+      techStack: ["Wordpress", "WooComerce"],
+      description:
+        t("description6"),
+      livePreview: "https://apologetika.lt",
     },
     {
       id: 3,
@@ -67,8 +78,8 @@ export default function Portfolio() {
       techStack: ["Twig", "HTML", "CSS"],
       description:
         t("description5"),
-      livePreview: "https://sveskim.lt/",
     },
+
 
   ];
   const [active, setActive] = useState(0);

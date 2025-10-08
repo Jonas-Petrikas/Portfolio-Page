@@ -4,7 +4,8 @@ import LinkedInLogo from "../assets/images/logos/linkedin.svg";
 import menuIcon from "../assets/images/icons/menu.svg";
 import MobileNav from "./MobileNav";
 import { useState } from 'react';
-import { NavLink } from "react-router";
+import { NavLink} from "react-router";
+import { HashLink as Link } from 'react-router-hash-link';
 import { useTranslation } from 'react-i18next';
 
 const code = "<";
@@ -14,7 +15,6 @@ export default function Header() {
   
   const [mobileNavVisable, setMobileNavVisible] = useState(false);
   const { t, i18n } = useTranslation('header');
-  console.log(i18n);
   return (
     <>
 
@@ -30,18 +30,18 @@ export default function Header() {
               </NavLink> 
           </div>
           <div className="nav-menu">
-            <a href="#about" className="menu-item">
+          <Link to="/#about" className="menu-item" end>
               {t('About')}
-            </a>
-            <a href="#portfolio" className="menu-item">
+            </Link> 
+            <Link to='/#portfolio' className="menu-item" end>
               {t('Portfolio')}
-            </a>
-            <a href="#pricing" className="menu-item">
+            </Link> 
+            <Link to="/#pricing" className="menu-item" end>
               {t('Pricing')}
-            </a>
-            <a href="#contacts" className="menu-item">
+            </Link>
+            <Link to="/#contacts" className="menu-item">
               {t('Contact')}
-            </a>
+            </Link>
           </div>
           <div className="cta">
             <div className="soc-icons">

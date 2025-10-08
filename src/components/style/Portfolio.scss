@@ -9,6 +9,10 @@
   margin-top: 100px;
   position: relative;
 
+  // &-container{
+  //   max-width: 1890px;
+  // }
+
   .portfolio-items {
 
     display: flex;
@@ -28,12 +32,14 @@
     .portfolio-item {
       background-color: black;
       border-radius: 15px;
+      width: 350px;
       min-width: 350px;
       display: flex;
       flex-direction: column;
       transition: all 0.3s;
 
       &-image {
+        object-fit: cover;
         img {
           width: 100%;
           filter: grayscale(75%);
@@ -42,7 +48,7 @@
             filter: grayscale(0%);
           }
 
-          border-radius: 15px 0 0 0px;
+          border-radius: 8px 8px 0 0px;
         }
       }
 

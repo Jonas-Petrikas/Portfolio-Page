@@ -2,6 +2,8 @@ import './style/MobileNav.scss';
 import githubLogo from "../assets/images/logos/github2.svg";
 import LinkedInLogo from "../assets/images/logos/linkedin.svg";
 import closeIcon from "../assets/images/icons/close.svg";
+import { HashLink as Link } from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next';
 
 
 const code = "<";
@@ -9,7 +11,7 @@ const code2 = "/>";
 
 
 export default function MobileNav({mobileNavVisable, setMobileNavVisible}) {
-    
+     const { t, i18n } = useTranslation('header');
     if (mobileNavVisable) {
         return (
             <div className="mobilenav-modal">
@@ -29,22 +31,19 @@ export default function MobileNav({mobileNavVisable, setMobileNavVisible}) {
                     <img src={closeIcon} alt="close icon" />
                 </div>
                 <div className="mobilenav-modal-menu">
-                    <a href="#about" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
-                        About
-                    </a>
-                    <a href="#portfolio" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
-                        Portfolio
-                    </a>
-                    <a href="#pricing" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
-                        Pricing
-                    </a>
-                    <a href="#contacts" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
-                        Contact
-                    </a>
-                    <a href="#contacts" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
-                        <button >Lets talk!</button>
-                    </a>
 
+                     <Link to="/#about" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)} end>
+                                  {t('About')}
+                                </Link> 
+                                <Link to='/#portfolio' className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)} end>
+                                  {t('Portfolio')}
+                                </Link> 
+                                <Link to="/#pricing" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)} end>
+                                  {t('Pricing')}
+                                </Link>
+                                <Link to="/#contacts" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)} end>
+                                  {t('Contact')}
+                                </Link>
                 </div>
                 <div className="mobilenav-modal-soc-icons">
                     <a href="https://github.com/Jonas-Petrikas" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>

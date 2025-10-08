@@ -1,59 +1,58 @@
 import './style/Pricing.scss';
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function Pricing() {
+    const { t, i18n } = useTranslation('pricing');
     return (
         <section className='pricing wrapper' id='pricing'>
-            <h2>Pricing</h2>
+            <h2>{t("title")}</h2>
             <div className="pricing-cards">
                 <div className="pricing-card-1">
-                    <h3>Starter</h3>
+                    <h3>{t("starter")}</h3>
                     <p className='pricing-card-subtitle'>Perfect for small personal projects or landing pages.</p>
                     <ul>
-                        <li>1-page custom website</li>
-                        <li>Responsive design</li>
-                        <li>Contact form integration</li>
-                        <li>Basic SEO setup</li>
-                        <li>Delivery: ~5 days</li>
+                        <Trans
+                            i18nKey={t("ul1")}
+                            components={{ li: <li/> }}
+                        />
                     </ul>
-                    <p>Price: €200–€300</p>
+                    <p>{t("price1")}</p>
 
 
                 </div>
                 <div className="pricing-card-2">
-                    <h3>Professional</h3>
-                    <p className='pricing-card-subtitle'>Great for businesses, portfolios, or product sites.</p>
+                    <h3>{t('professional')}</h3>
+                    <p className='pricing-card-subtitle'>{t('subtitle2')}</p>
                     <ul>
-                        <li>Up to 5 pages (Home, About, Services, etc.)</li>
-                        <li>Custom design & layout</li>
-                        <li>Optimized for mobile</li>
-                        <li>Contact form + social links</li>
-                        <li>Light animations or effects</li>
-                        <li>Delivery: ~10–14 days</li>
+                      <Trans
+                            i18nKey={t("ul2")}
+                            components={{ li: <li/> }}
+                        />
                     </ul>
-                    <p>Price: €500–€700</p>
+                    <p>{t("price2")}</p>
                 </div>
                 <div className="pricing-card-3">
-                    <h3>Premium</h3>
-                    <p className='pricing-card-subtitle'>Best for larger or more custom projects.</p>
+                    <h3>{t('premium')}</h3>
+                    <p className='pricing-card-subtitle'>{t('subtitle3')}</p>
                     <ul>
-                        <li>6+ pages or dynamic features (e.g. blog, gallery)</li>
-                        <li>CMS integration (WordPress or custom)</li>
-                        <li>Advanced animations or interactions</li>
-                        <li>Ongoing support (1 month)</li>
-                        <li>Delivery: ~3–4 weeks</li>
+                      <Trans
+                            i18nKey={t("ul3")}
+                            components={{ li: <li/> }}
+                        />
                     </ul>
-                    <p>Price: Starting from €900+</p>
+                    <p>{t("price3")}</p>
 
                 </div>
             </div>
 
             <div className="pricing-addons">
-                <p>Optional add-ons: </p>
+                <p>{t("addons")}</p>
                 <hr />
                 <div>
-                <li>SEO optimization - €80</li>
-                <li>Multi-language support  - €150</li>
-                <li>Maintenance & suppprt - from €50 / month</li>
+                      <Trans
+                            i18nKey={t("addonOptions")}
+                            components={{ li: <li/> }}
+                        />
                 </div>
 
 

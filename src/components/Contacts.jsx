@@ -1,13 +1,18 @@
 import './style/Contacts.scss';
 import ContactForm from './ContactForm';
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function Contacts() {
+      const { t, i18n } = useTranslation('contacts');
     return (
         <section className='contacts wrapper' id='contacts'>      
-                <h2>Let's talk!</h2>
+                <h2>{t("title")}</h2>
                 <div className='contacts-text'>
-                <p>Have a project in mind or just want to say hi? I'd love to hear from you. </p>
-                <p> Fill out the form below or email me directly at <a href="mailto:jonas@jonaspetrikas.com">jonas@jonaspetrikas.com</a>.</p>
+                <p>{t("p1")}</p>
+                <p>                   <Trans
+                            i18nKey={t("p2")}
+                            components={{ a: <a/> }}
+                        /></p>
             </div>
 <ContactForm/>
         </section>
