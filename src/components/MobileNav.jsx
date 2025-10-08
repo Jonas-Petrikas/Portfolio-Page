@@ -27,10 +27,12 @@ export default function MobileNav({mobileNavVisable, setMobileNavVisible}) {
                         <span className="logo-decor"> {code2} </span>
                     </a>
                 </div>
+                
                 <div className='mobilenav-modal-close' onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
                     <img src={closeIcon} alt="close icon" />
                 </div>
                 <div className="mobilenav-modal-menu">
+                    
 
                      <Link to="/#about" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)} end>
                                   {t('About')}
@@ -44,7 +46,10 @@ export default function MobileNav({mobileNavVisable, setMobileNavVisible}) {
                                 <Link to="/#contacts" className="menu-item" onClick={_ => setMobileNavVisible(!mobileNavVisable)} end>
                                   {t('Contact')}
                                 </Link>
+
+                                 <button onClick={i18n.language==='lt'? _=>i18n.changeLanguage('en') : _=>i18n.changeLanguage('lt') }>{i18n.language==='lt' ? 'English' : 'Lietuviškai'}</button>
                 </div>
+
                 <div className="mobilenav-modal-soc-icons">
                     <a href="https://github.com/Jonas-Petrikas" onClick={_ => setMobileNavVisible(!mobileNavVisable)}>
                         <img src={githubLogo} alt="Github logo" />

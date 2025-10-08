@@ -55,9 +55,9 @@ export default function Header() {
 
             </div>
 
-            <a href="#contacts">
+            <Link to="/#contacts">
               <button>{t("Let's talk!")}</button>
-            </a>
+            </Link>
                    
               <button onClick={i18n.language==='lt'? _=>i18n.changeLanguage('en') : _=>i18n.changeLanguage('lt') }>{i18n.language==='lt' ? 'EN' : 'LT'}</button>
       

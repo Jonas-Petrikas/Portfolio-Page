@@ -61,7 +61,7 @@ const resources = {
       "ul3": `<li>6+ pages or dynamic features (e.g. blog, gallery)</li>
               <li>CMS integration (WordPress or custom)</li>
               <li>Advanced animations or interactions</li>
-              <li>Ongoing support (1 month)</li>
+              <li>Ongoing support (2 months)</li>
               <li>Delivery: ~3–4 weeks</li>`,
       "price1": "Price: €200–€300",
       "price2": "Price: €500–€700",
@@ -139,14 +139,14 @@ const resources = {
       "title": "kainos",
       "starter": "pradinis",
       "professional": "profesionalus",
-      "premium": "aukščiausios klasės",
+      "premium": "premium",
       "subtitle1": "Puikiai tinka mažiems asmeniniams projektams ar nukreipimo puslapiams.",
       "subtitle2": "Idealu verslams, portfolio ar produktų svetainėms.",
-      "subtitle3": "Geriausia didesniems ar labiau pritaikytiems projektams.",
+      "subtitle3": "Geriausia didesniems ar sudetingesniems projektams.",
       "ul1": `<li>1 puslapio individuali svetainė</li>
-          <li>Responsyvus dizainas</li>
+          <li>Mobiliems pritaikytas dizainas</li>
           <li>Kontaktų formos integracija</li>
-          <li>Pagrindinis SEO nustatymas</li>
+          <li>Baziniai SEO nustatymai</li>
           <li>Atlikimo terminas: ~5 dienos</li>`,
       "ul2": `<li>Iki 5 puslapių (pagrindinis, apie, paslaugos ir kt.)</li>
           <li>Individualus dizainas ir išdėstymas</li>
@@ -157,7 +157,7 @@ const resources = {
       "ul3": `<li>6+ puslapių arba dinaminės funkcijos (pvz. tinklaraštis, galerija)</li>
           <li>TVS integracija (WordPress arba individuali)</li>
           <li>Išplėstinės animacijos ar sąveikos</li>
-          <li>Tęstinė pagalba (1 mėnuo)</li>
+          <li>Tęstinė pagalba (2 mėn.)</li>
           <li>Atlikimo terminas: ~3–4 savaitės</li>`,
       "price1": "Kaina: €200–€300",
       "price2": "Kaina: €500–€700",
