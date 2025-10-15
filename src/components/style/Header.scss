@@ -6,6 +6,7 @@ header {
   justify-content: center;
   box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.75);
   background-color: rgba(0, 0, 0, 0.26);
+  user-select: none;
 }
 
 .top-navbar {
@@ -16,7 +17,7 @@ header {
   width: 100%;
 
   // max-width: 1280px;
-  min-width: 100vh;
+  // min-width: 100vw;
   height: 100%;
   padding: 15px;
 
@@ -94,6 +95,31 @@ header {
 
       }
     }
+    .lang-change{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      font-weight: 500;
+      cursor: pointer;
+      width: 35px;
+      padding: 5px;
+      user-select: none;
+      opacity: 70%;
+      transition: all 0.3s ease-in-out;
+      
+      img{
+       width: 25px;
+       height: auto;
+        object-fit: cover;
+
+      }
+      &:hover{
+        // color: $accent-color;
+        opacity: 100%;
+      
+      }
+    }
   }
 
   .menu-item {
@@ -110,11 +136,11 @@ header {
 
 
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 850px){
 
 
   .mobile-header {
-    position: fixed;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;

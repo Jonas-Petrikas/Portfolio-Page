@@ -2,16 +2,24 @@ import "./style/Header.scss";
 import githubLogo from "../assets/images/logos/github2.svg";
 import LinkedInLogo from "../assets/images/logos/linkedin.svg";
 import menuIcon from "../assets/images/icons/menu.svg";
+import LTflag from "../assets/images/flags/EN-flag.svg";
+import ENflag from "../assets/images/flags/LT-flag.svg";
 import MobileNav from "./MobileNav";
 import { useState } from 'react';
 import { NavLink} from "react-router";
 import { HashLink as Link } from 'react-router-hash-link';
 import { useTranslation } from 'react-i18next';
 
+
 const code = "<";
 const code2 = "/>";
 
 export default function Header() {
+  const changeLanguage=lang=>{
+     localStorage.setItem("lang", lang);
+     i18n.changeLanguage(lang);
+
+  }
   
   const [mobileNavVisable, setMobileNavVisible] = useState(false);
   const { t, i18n } = useTranslation('header');
@@ -59,7 +67,7 @@ export default function Header() {
               <button>{t("Let's talk!")}</button>
             </Link>
                    
-              <button onClick={i18n.language==='lt'? _=>i18n.changeLanguage('en') : _=>i18n.changeLanguage('lt') }>{i18n.language==='lt' ? 'EN' : 'LT'}</button>
+              <div className="lang-change" onClick={i18n.language==='lt'? _=>changeLanguage('en') : _=>changeLanguage('lt') }>{i18n.language==='lt' ? "EN" : "LT"}<img src={i18n.language==='lt' ? LTflag : ENflag} alt={i18n.language==='lt' ? "English flag" : "Lithuanian flag"}/></div>
       
           </div>
         </div>

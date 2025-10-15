@@ -1,16 +1,19 @@
 import './App.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import ToS from './pages/ToS';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import SlideUp from './components/SlideUp';
 import CookieConsent from './components/CookieConsent';
+import SEO from './SEO';
 
 function App() {
+  
   return (
     <>
+      <SEO />
       <Header />
       <SlideUp />
       <Routes>

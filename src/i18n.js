@@ -6,6 +6,9 @@ import { initReactI18next } from "react-i18next";
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   en: {
+    meta: {
+
+    },
     header: {
       "About": "About",
       "Portfolio": "Portfolio",
@@ -28,7 +31,7 @@ const resources = {
       "description3": "Custom built responsive landing page for film festival. ux/ui, analytics.",
       "description4": "Landing page built following a Figma design and requirements.",
       "description5": "Website for a local business. Built following design and requirements.",
-      "description6": "Remade wordpress website keeping the content, added funtionality",
+      "description6": "Complete design rewamp. Donations and events functionality",
       "Check more": "Check other projects on"
     },
     about: {
@@ -60,7 +63,6 @@ const resources = {
               <li>Delivery: ~10–14 days</li>`,
       "ul3": `<li>6+ pages or dynamic features (e.g. blog, gallery)</li>
               <li>CMS integration (WordPress or custom)</li>
-              <li>Advanced animations or interactions</li>
               <li>Ongoing support (2 months)</li>
               <li>Delivery: ~3–4 weeks</li>`,
       "price1": "Price: €200–€300",
@@ -99,6 +101,11 @@ const resources = {
       "privacy": "Privacy Policy",
       "toc": "Terms of Service",
     },
+    meta: {
+      "title": "Jonas Petrikas | Freelance Web Developer",
+      "description": "Jonas Petrikas – freelance web developer specializing in React, and WordPress. I create high-quality business websites and custom web applications that drive results.",
+      "keywords": "freelance web developer, Jonas Petrikas, Lithuania web developer, React developer, WordPress expert, custom websites, business websites, web apps",
+    }
 
 
   },
@@ -111,7 +118,7 @@ const resources = {
       "Let's talk!": "Pasikalbame!",
     },
     hero: {
-      "title": "Nestandartiniai WEB sprendimai",
+      "title": "Unikalūs WEB sprendimai",
       "text": "Pagalba išnaudojant skaitmenines galimybes jūsų verslo augimui",
       "View My Work": "Peržiūrėti darbus",
       "Get in Touch": "Susisiekti!",
@@ -125,6 +132,7 @@ const resources = {
       "description3": "individualiai sukurta adaptyvi svetainė kino festivaliui. Įskaitant UX/UI dizainą ir analitiką.",
       "description4": "Funkcionalus svetainės pagrindinis puslapis, sukurtas pagal Figma dizainą ir reikalavimus.",
       "description5": "Verslo svetainė vietiniam verslui. Sukurta pagal paruoštą dizainą ir reikalavimus.",
+      "description6": "Perdarytas dizainas, pridėtos renginių ir paramos funkcijos.",
       "Check more": "Peržiūrėti daugiau projektų"
     },
     about: {
@@ -156,7 +164,6 @@ const resources = {
           <li>Atlikimo terminas: ~10–14 dienų</li>`,
       "ul3": `<li>6+ puslapių arba dinaminės funkcijos (pvz. tinklaraštis, galerija)</li>
           <li>TVS integracija (WordPress arba individuali)</li>
-          <li>Išplėstinės animacijos ar sąveikos</li>
           <li>Tęstinė pagalba (2 mėn.)</li>
           <li>Atlikimo terminas: ~3–4 savaitės</li>`,
       "price1": "Kaina: €200–€300",
@@ -183,7 +190,7 @@ const resources = {
     },
     footer: {
       "about": "apie",
-      "summary": "Laisvai samdomas žiniatinklio kūrėjas, kuriantis modernias, responsyvias svetaines, padedančias pasiekti rezultatus.",
+      "summary": "Laisvai samdomas tinklalapių kūrėjas, kuriantis modernias, mobiliems pritaikytas svetaines, padedančias pasiekti rezultatus.",
       "available": "Pasiekiamas naujiems projektams",
       "services": "Paslaugos",
       "servicesList": `<li>Individualus svetainių kūrimas</li>
@@ -195,17 +202,22 @@ const resources = {
       "privacy": "Privatumo politika",
       "toc": "Naudojimo sąlygos",
     },
-
-
+    meta: {
+      "title": "Jonas Petrikas | Freelance svetainių kūrėjas",
+      "description": "Jonas Petrikas – laisvai samdomas (freelance) svetainių kūrėjas dirbantis su React ir WordPress. Kuriu aukštos kokybės verslo tinklapius bei web aplikacijas, kurios neša rezultatus",
+      "keywords": "freelance programuotojas, Jonas Petrikas, svetainės lietuvoje, React programuotojas, WordPress ekspertas, individualūs tinklapiai, verslo svetainės, web aplikacijos",
+    }
   }
 
-};
 
+};
+const lang = localStorage.getItem("lang") || 'lt';
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+
+    lng: lang, // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
     // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
     // if you're using a language detector, do not define the lng option
 

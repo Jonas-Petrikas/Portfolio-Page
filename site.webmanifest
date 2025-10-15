@@ -1,0 +1,21 @@
+{
+  "name": "Jonas Petrikas",
+  "short_name": "JonasDev",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1d2427",
+  "theme_color": "#fa8072",
+  "description": "Freelance Web Developer specializing in React, Symfony, and WordPress.",
+  "icons": [
+    {
+      "src": "/images/About-code-decor.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/About-code-decor.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
